@@ -21,7 +21,6 @@ int	main(int argc, char**argv)
 	else
 	{
 		int	i = 1;
-		int	j = 0;
 		while (i < argc)
 		{
 			j = 0;
