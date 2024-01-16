@@ -11,30 +11,30 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
-//using namespace std;
+using namespace std;
 
 int	main(int argc, char**argv)
 {
 	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		int	i = 1;
+		int	j;
 		while (i < argc)
 		{
 			j = 0;
 			while (argv[i][j])
 			{
 				char	c = toupper(argv[i][j]);
-				std::cout << c;
+				cout << c;
 				j++;
 			}
 			if (i != (argc - 1))
-				std::cout << " ";
+				cout << " ";
 			i++;
 		}
 	}
-	std::cout << "\n";
+	cout << endl;
 	return 0;
 }

@@ -16,8 +16,9 @@ CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
-SRCS =		contact.cpp \
-			phonebook.cpp
+SRCS = 	main.cpp \
+		phonebook.cpp \
+		contact.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 
 all: $(NAME)

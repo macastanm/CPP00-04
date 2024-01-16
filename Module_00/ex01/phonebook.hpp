@@ -10,4 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
+# include <iostream>
+# include <string>
+# include "contact.hpp"
+# include <cstdlib>
+# include <iomanip>
+
+class	Phonebook
+{
+	Contact	info[8];
+public:
+	void	addContact(int position);
+	void	displayContact(int size);
+	void	handleSpaces(std::string info);
+	void	searchDisplay(int size);
+};
+
+#endif
