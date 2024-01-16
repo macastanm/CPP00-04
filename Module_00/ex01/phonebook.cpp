@@ -43,16 +43,17 @@ void	Phonebook::displayContact(int size)
 {
 	int	i = 0;
 
-	std::cout << "Index     |First Name|Last Name |Nickname  |" << std::endl;
+	std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
 	while (i < size)
 	{
-		std::cout << (i + 1) << "         " << "|";
+		std::cout << "|" << (i + 1) << "         " << "|";
 		handleSpaces(info[i].getFirstName());
 		handleSpaces(info[i].getLastName());
 		handleSpaces(info[i].getNickName());
 		std::cout << std::endl;
 		i++;
 	}
+	std::cout << std::endl;
 }
 
 int	checkDigit(std::string command)
@@ -74,13 +75,12 @@ void	Phonebook::searchDisplay(int size)
 
 	while (1)
 	{
-		//std::cout << "Write BACK to go to the menu or" << std::endl;
 		std::cout << "Chose an index to expand the contact information: " << std::endl;
 		getline(std::cin, command);
 		if (checkDigit(command) == 1)
 		{
 			system("clear");
-			std::cout << "Wrong index, please check your options." << std::endl << std::endl;
+			std::cout << "Wrong index, please check your options:" << std::endl << std::endl;
 			displayContact(size);
 			std::cout << std::endl;
 			continue;
@@ -89,7 +89,7 @@ void	Phonebook::searchDisplay(int size)
 		if (i <= 0 || i > size)
 		{
 			system("clear");
-			std::cout << "Wrong index, please check your options." << std::endl << std::endl;
+			std::cout << "Wrong index, please check your options:" << std::endl << std::endl;
 			displayContact(size);
 			std::cout << std::endl;
 			continue;
@@ -98,7 +98,6 @@ void	Phonebook::searchDisplay(int size)
 		{
 			i--;
 			system("clear");
-			std::cout << std::endl;
 			std::cout << "First Name:     " << info[i].getFirstName() << std::endl;
 			std::cout << "Last Name:      " << info[i].getLastName() << std::endl;
 			std::cout << "Nickname:       " << info[i].getNickName() << std::endl;
