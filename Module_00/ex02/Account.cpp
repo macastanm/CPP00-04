@@ -84,7 +84,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 		std::cout << "index:" << this->_accountIndex << ";";
 		std::cout << "p_amount:" << this->_amount << ";";
 		std::cout << "withdrawals:" << "refused" << std::endl;
-		return (true);
+		return (false);
 	}
 	else
 	{
@@ -98,7 +98,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 		std::cout << "withdrawal:" << withdrawal << ";";
 		std::cout << "amount:" << this->_amount << ";";
 		std::cout << "nb_withdrawals:" << this->_nbWithdrawals << std::endl;
-		return (false);
+		return (true);
 	}
 }
 
