@@ -11,12 +11,11 @@
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int	main(int argc, char**argv)
 {
 	if (argc == 1)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		int	i = 1;
@@ -27,14 +26,14 @@ int	main(int argc, char**argv)
 			while (argv[i][j])
 			{
 				char	c = toupper(argv[i][j]);
-				cout << c;
+				std::cout << c;
 				j++;
 			}
 			if (i != (argc - 1))
-				cout << " ";
+				std::cout << " ";
 			i++;
 		}
 	}
-	cout << endl;
+	std::cout << std::endl;
 	return 0;
 }
