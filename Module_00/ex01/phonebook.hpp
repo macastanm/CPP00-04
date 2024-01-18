@@ -21,7 +21,9 @@
 
 class	Phonebook
 {
+private:
 	Contact	info[8];
+
 public:
 	void	addContact(int position);
 	void	displayContact(int size);
