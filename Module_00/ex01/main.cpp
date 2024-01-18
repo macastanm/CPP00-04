@@ -25,7 +25,11 @@ int	main(int argc, char **argv)
 		while (1)
 		{
 			std::cout << "Chose your command: " << std::endl;
-			getline(std::cin, command);
+			if (!getline(std::cin, command))
+			{
+				std::cout << "Error, try again!" << std::endl;
+				exit(1);
+			}
 			if (position == 8)
 			{
 				position = 0;
@@ -42,8 +46,15 @@ int	main(int argc, char **argv)
 			else if (command == "SEARCH")
 			{
 				system("clear");
-				phonebook.displayContact(size);
-				phonebook.searchDisplay(size);
+				if (size == 0)
+				{
+					std::cout << "There is no contact yet. Try ADD first!" << std::endl << std::endl;
+				}
+				else
+				{
+					phonebook.displayContact(size);
+					phonebook.searchDisplay(size);
+				}
 			}
 			else if (command == "EXIT")
 			{

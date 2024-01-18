@@ -76,7 +76,11 @@ void	Phonebook::searchDisplay(int size)
 	while (1)
 	{
 		std::cout << "Chose an index to expand the contact information: " << std::endl;
-		getline(std::cin, command);
+		if (!getline(std::cin, command))
+		{
+			std::cout << "Error, try again with a valid contact!" << std::endl;
+			exit(1);
+		}
 		if (checkDigit(command) == 1)
 		{
 			system("clear");
