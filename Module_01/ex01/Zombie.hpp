@@ -3,14 +3,20 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
 
 class	Zombie
 {
 private:
-
+	std::string	name;
 
 public:
-	Zombie* zombieHorde( int N, std::string name );
+	Zombie();
+	~Zombie();
+	void	zombieName(std::string n);
+	void	announce(int num);
 };
+
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif
