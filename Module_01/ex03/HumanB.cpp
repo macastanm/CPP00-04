@@ -2,7 +2,6 @@
 
 HumanB::HumanB(std::string n)
 {
-	weapon = 0;
 	name = n;
 }
 HumanB::~HumanB() {}
