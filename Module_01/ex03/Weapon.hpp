@@ -16,8 +16,6 @@
 # include <iostream>
 # include <string>
 # include <cstdlib>
-# include "HumanA.hpp"
-# include "HumanB.hpp"
 
 class	Weapon
 {

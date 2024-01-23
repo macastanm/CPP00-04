@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanB.hpp"
 #include "Weapon.hpp"
 
-HumanB::HumanB(std::string n)
+HumanB::HumanB(std::string n) : weapon(0), name(n)
 {
-	name = n;
 }
 HumanB::~HumanB() {}
 
-void	HumanB::setWeapon(std::string& name)
+void	HumanB::setWeapon(Weapon& w)
 {
-	weapon = name;
+	this->weapon = &w;
 }
 
 void	HumanB::attack()
 {
-	std::cout << name << " attacks with their " << weapon << std::endl;
+	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }
