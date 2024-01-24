@@ -26,7 +26,6 @@ int	main(void)
 			return (1);
 		}
 	}
-	std::cout << std::endl << "Here is your Harl:" << std::endl;
 	harl.complain(level);
 	return (0);
 }

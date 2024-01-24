@@ -48,11 +48,18 @@ void	Harl::complain(std::string level)
 	void (Harl::*functions[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	for(int i = 0; i < 4 ; i++)
+	int i;
+	for(i = 0; i < 4 ; i++)
 	{
 		if (levels[i] == level)
 		{
+			std::cout << std::endl << "Here is your Harl:" << std::endl << std::endl;
 			(this->*functions[i])();
+			break;
 		}
+	}
+	if (i == 4)
+	{
+		std::cout << std::endl << "Can't find a harl, do better next time" << std::endl;
 	}
 }
