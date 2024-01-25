@@ -18,6 +18,11 @@
 std::string	changeLine(std::string l, std::string s1, std::string s2)
 {
 	size_t	i = 0;
+
+	if (s1 == s2)
+	{
+		return (l);
+	}
 	while (1)
 	{
 		i = l.find(s1);
