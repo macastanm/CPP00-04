@@ -21,10 +21,16 @@
 class	Fixed
 {
 private:
-
+	int	_fp_value;
+	static const int	_fract_bits;
 
 public:
-
+	Fixed();
+	Fixed(const Fixed& copy);
+	Fixed &operator = (const Fixed& src);
+	~Fixed();
+	int	getRawBits() const;
+	void	setRawBits(int const raw);
 };
 
 #endif

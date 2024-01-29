@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = fixed
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	clear
-	@echo "./Fixed is ready!"
+	@echo "./fixed is ready!"
 
 clean:
 	@$(RM) $(OBJS)
