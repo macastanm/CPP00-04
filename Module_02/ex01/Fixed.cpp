@@ -19,6 +19,18 @@ Fixed::Fixed() : _fp_value(0)
 	std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed(const int num)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->_fp_value = num * (1 << _fract_bits);
+}
+
+Fixed::Fixed(const float num)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->_fp_value = num * (1 << _fract_bits);
+}
+
 Fixed::Fixed(const Fixed &copy)
 {
 	*this = copy;
@@ -50,4 +62,14 @@ void Fixed::setRawBits(const int raw)
 {
 	this->_fp_value = raw;
 	std::cout << "setRawBits member function called" << std::endl;
+}
+
+int Fixed::toInt() const
+{
+	return (_fp_value / (1 << _fract_bits));
+}
+
+float Fixed::toFloat() const
+{
+	return (static_cast<float>(_fp_value) / (1 << _fract_bits));
 }
