@@ -49,5 +49,5 @@ int Fixed::getRawBits() const
 void Fixed::setRawBits(const int raw)
 {
 	this->_fp_value = raw;
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "setRawBits member function called" << std::endl;
 }
