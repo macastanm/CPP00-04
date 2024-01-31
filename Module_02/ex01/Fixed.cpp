@@ -74,7 +74,7 @@ float	Fixed::toFloat() const
 	return (static_cast<float>(_fp_value) / (1 << _fract_bits));
 }
 
-std::ostream& operator<<(std::ostream& output, const Fixed& copy) {
+std::ostream&	operator<<(std::ostream& output, const Fixed& copy) {
 	output << copy.toFloat();
 	return (output);
 }
