@@ -52,24 +52,29 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-int Fixed::getRawBits() const
+int	Fixed::getRawBits() const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->_fp_value);
 }
 
-void Fixed::setRawBits(const int raw)
+void	Fixed::setRawBits(const int raw)
 {
 	this->_fp_value = raw;
-	std::cout << "setRawBits member function called" << std::endl;
+	//std::cout << "setRawBits member function called" << std::endl;
 }
 
-int Fixed::toInt() const
+int	Fixed::toInt() const
 {
 	return (_fp_value / (1 << _fract_bits));
 }
 
-float Fixed::toFloat() const
+float	Fixed::toFloat() const
 {
 	return (static_cast<float>(_fp_value) / (1 << _fract_bits));
+}
+
+std::ostream& operator<<(std::ostream& output, const Fixed& copy) {
+	output << copy.toFloat();
+	return (output);
 }
