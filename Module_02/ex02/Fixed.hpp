@@ -31,10 +31,32 @@ public:
 	Fixed(const Fixed& copy);
 	Fixed &operator = (const Fixed& src);
 	~Fixed();
-	int	getRawBits() const;
+	int		getRawBits() const;
 	void	setRawBits(int const raw);
 	float	toFloat() const;
-	int	toInt() const;
+	int		toInt() const;
+
+	bool	operator>(const Fixed &num) const;
+	bool	operator<(const Fixed &num) const;
+	bool	operator>=(const Fixed &num) const;
+	bool	operator<=(const Fixed &num) const;
+	bool	operator==(const Fixed &num) const;
+	bool	operator!=(const Fixed &num) const;
+
+	Fixed	operator+(const Fixed &num) const;
+	Fixed	operator-(const Fixed &num) const;
+	Fixed	operator*(const Fixed &num) const;
+	Fixed	operator/(const Fixed &num) const;
+
+	Fixed	operator++(int);
+	Fixed&	operator++();
+	Fixed	operator--(int);
+	Fixed&	operator--();
+
+	static Fixed&			min(Fixed& num_one, Fixed& num_two);
+	static const Fixed&		min(const Fixed& num_one, const Fixed& num_two);
+	static Fixed&			max(Fixed& num_one, Fixed& num_two);
+	static const Fixed&		max(const Fixed& num_one, const Fixed& num_two);
 };
 
 std::ostream& operator<<(std::ostream& output, const Fixed& copy);
