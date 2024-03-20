@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
-# define SCAVPTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
 

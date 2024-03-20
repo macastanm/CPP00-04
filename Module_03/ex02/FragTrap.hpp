@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
-# define FRAGPTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
