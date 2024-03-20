@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 
+int	main()
+{
+	ClapTrap	Robot("Robot");
+	ClapTrap	Robert("Robert");
+
+	Robot.attack("Robert");
+	Robert.takeDamage(0);
+	Robert.attack("Robot");
+	Robot.takeDamage(15);
+	Robot.beRepaired(15);
+}

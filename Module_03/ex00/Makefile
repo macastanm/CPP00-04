@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	clear
-	@echo "./fixed is ready!"
+	@echo "./ClapTrap is ready!"
 
 clean:
 	@$(RM) $(OBJS)
