@@ -12,7 +12,7 @@
 
 NAME = unnecessaryViolence
 
-CPP = c++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
@@ -25,7 +25,7 @@ OBJS = $(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	clear
 	@echo "./unnecessaryViolence is ready!"
 
