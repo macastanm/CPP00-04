@@ -10,4 +10,63 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
+#include "Cat.hpp"
 
+Cat::Cat() : Animal("cat")
+{
+	std::cout << "Cat: " << type << " created." << std::endl;
+}
+
+Cat::Cat(const Cat &copy)
+{
+	*this = copy;
+}
+
+Cat&	Cat::operator=(const Cat &src){
+	if (this != &src)
+	{
+		this->type = src.type;
+	}
+	return (*this);
+}
+
+Cat::~Cat()
+{
+	std::cout << "Cat: " << type << " destroyed." << std::endl;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << std::endl;
+	std::cout << "　／l、" << std::endl;
+	std::cout << "（ﾟ､ ｡ ７ - Meow?" << std::endl;
+	std::cout << "　l、 ~ヽ" << std::endl;
+	std::cout << "　じしf_, )ノ" << std::endl << std::endl << std::endl;
+}
+
+/*  "    /\___/\ "
+    "   /       \ "
+	"  l  u   u  l"
+	"--l----*----l--"
+	"   \   w   /     - Meow!"
+	"    ======"
+	"    /       \ "
+	"   l        l\ \ "
+    "   l        l/ / "
+	"   l  l l   l /"
+	"   \ ml lm /_/"
+
+      ,_     _
+      |\\_,-/|
+      / _  _ |    ,--.
+     (  @  @ )   / ,-'
+      \  _T_/-._( (
+      /         `. \
+     |         _  \ |
+      \ \ ,  /      |
+       || |-_\__   /
+      ((_/`(____,-'
+
+
+ */

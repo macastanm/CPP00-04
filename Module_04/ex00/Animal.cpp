@@ -10,4 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
 
+Animal::Animal() : type("undefined")
+{
+	std::cout << "Animal: " << type << " created." << std::endl;
+}
+
+Animal::Animal(std::string name) : type(name)
+{
+	std::cout << "Animal: " << type << " created." << std::endl;
+}
+
+Animal::Animal(const Animal &copy)
+{
+	*this = copy;
+}
+
+Animal&	Animal::operator=(const Animal &src){
+	if (this != &src)
+	{
+		this->type = src.type;
+	}
+	return (*this);
+}
+
+Animal::~Animal()
+{
+	std::cout << "Animal: " << type << " destroyed." << std::endl;
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal: " << type << " make no sound." << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return (type);
+}
