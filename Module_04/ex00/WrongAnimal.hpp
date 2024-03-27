@@ -10,4 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
+# include <iostream>
+# include <string>
+
+class	WrongAnimal
+{
+protected:
+	std::string	type;
+
+public:
+	WrongAnimal();
+	WrongAnimal(std::string name);
+	WrongAnimal(const WrongAnimal& copy);
+	WrongAnimal &operator = (const WrongAnimal& src);
+	virtual ~WrongAnimal();
+
+	virtual void	makeSound(void) const;
+	std::string	getType(void) const;
+};
+
+#endif
