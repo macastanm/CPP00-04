@@ -18,33 +18,44 @@
 
 int main()
 {
-	std::cout << "Subject tests" << std::endl << std::endl;
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	Animal	*arrayOfAnimals[6];
 
-	delete meta;
-	delete i;
-	delete j;
+	for (int i = 0; i < 3; i++)
+	{
+		std::cout << std::endl << "Animal: [" << i << "]" << std::endl;
+		arrayOfAnimals[i] = new Cat();
+	}
+	for (int j = 3; j < 6; j++)
+	{
+		std::cout << std::endl << "Animal: [" << j << "]" << std::endl;
+		arrayOfAnimals[j] = new Dog();
+	}
+	std::cout << "Animals created." << std::endl << std::endl;
 
-	std::cout << std::endl << std::endl;
-	std::cout << "Wrong tests" << std::endl << std::endl;
+	for (int x = 0; x < 3; x++)
+	{
+		std::cout << "Animal [" << x << "] make this sound:" << std::endl;
+		arrayOfAnimals[x]->makeSound();
+		std::cout << std::endl;
+		std::cout << "Animal address: " << arrayOfAnimals[x] << std::endl;
+		Cat*	catPtr = (Cat *)arrayOfAnimals[x];
+		std::cout << "Brain address: " << catPtr->getBrain() << std::endl << std::endl;
+	}
+	for (int y = 3; y < 6; y++)
+	{
+		std::cout << "Animal [" << y << "] make this sound:" << std::endl;
+		arrayOfAnimals[y]->makeSound();
+		std::cout << std::endl;
+		std::cout << "Animal address: " << arrayOfAnimals[y] << std::endl;
+		Dog*	dogPtr = (Dog *)arrayOfAnimals[y];
+		std::cout << "Brain address: " << dogPtr->getBrain() << std::endl << std::endl;
+	}
 
-	const WrongAnimal *met = new WrongAnimal();
-	//const Animal *a = new Dog();
-	const WrongAnimal *b = new WrongCat();
-	std::cout << b->getType() << " " << std::endl;
-	//std::cout << a->getType() << " " << std::endl;
-	//a->makeSound(); //will output the cat sound!
-	b->makeSound();
-	meta->makeSound();
-
-	delete met;
-	//delete a;
-	delete b;
+	for (int z = 0; z < 6; z++)
+	{
+		std::cout << "Animal [" << z << "] is dying." << std::endl;
+		delete arrayOfAnimals[z];
+		std::cout << std::endl;
+	}
+	return 0;
 }

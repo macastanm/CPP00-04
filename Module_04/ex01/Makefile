@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animal
+NAME = AnimalBrain
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -21,7 +21,8 @@ SRCS = 	main.cpp \
 		Cat.cpp \
 		Dog.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 
 all: $(NAME)
@@ -29,7 +30,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	clear
-	@echo "./Animal is ready!"
+	@echo "./AnimalBrain is ready!"
 
 clean:
 	@$(RM) $(OBJS)

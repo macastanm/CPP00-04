@@ -51,3 +51,7 @@ void	Dog::makeSound() const
 	std::cout << "              |/ \\_( # |' " << std::endl;
 	std::cout << "             C/ ,--___/   " << std::endl << std::endl << std::endl;
 }
+
+Brain*	Dog::getBrain() const {
+	return (this->brain);
+}

@@ -42,7 +42,7 @@ int main()
 	//std::cout << a->getType() << " " << std::endl;
 	//a->makeSound(); //will output the cat sound!
 	b->makeSound();
-	meta->makeSound();
+	met->makeSound();
 
 	delete met;
 	//delete a;

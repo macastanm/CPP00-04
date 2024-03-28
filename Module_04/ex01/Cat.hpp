@@ -16,7 +16,7 @@
 # include "Animal.hpp"
 #include "Brain.hpp"
 
-class	Cat : virtual public Animal
+class	Cat : public Animal
 {
 private:
 	Brain*	brain;
@@ -27,6 +27,7 @@ public:
 	~Cat();
 
 	void	makeSound(void) const;
+	Brain*	getBrain(void) const;
 };
 
 #endif

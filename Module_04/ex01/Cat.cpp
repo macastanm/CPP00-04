@@ -49,6 +49,10 @@ void	Cat::makeSound() const
 	std::cout << "　じしf_, )ノ" << std::endl << std::endl << std::endl;
 }
 
+Brain*	Cat::getBrain() const {
+	return (this->brain);
+}
+
 /*  "    /\___/\ "
     "   /       \ "
 	"  l  u   u  l"
